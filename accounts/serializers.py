@@ -13,9 +13,10 @@ class RegisterSerializer(serializers.ModelSerializer):
             "last_name",
             "password",
             "is_active",
-            "is_supperuser",
+            "is_superuser",
             "date_joined",
         ]
+        extra_kwargs = {"password": {"write_only": True}}
 
     def create(self, validated_data):
         return Account.objects.create_user(**validated_data)
