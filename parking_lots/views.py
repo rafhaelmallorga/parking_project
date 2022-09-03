@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from rest_framework import generics
 
-# Create your views here.
+from .models import ParkingLot
+from .serializers import ParkingLotSerializer
+
+
+class ListCreateParkingLotView(generics.ListCreateAPIView):
+    queryset = ParkingLot.objects.all()
+    serializer_class = ParkingLotSerializer
