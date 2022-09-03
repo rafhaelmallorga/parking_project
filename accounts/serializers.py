@@ -3,6 +3,16 @@ from rest_framework import serializers
 from .models import Account
 
 
+class OwnerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Account
+        fields = [
+            "id",
+            "username",
+            "date_joined",
+        ]
+
+
 class RegisterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Account
