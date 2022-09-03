@@ -5,5 +5,5 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("parking-lots", views.ListCreateParkingLotView.as_view()),
+    path("parking-lots/", views.ListCreateParkingLotView.as_view()),
 ]
