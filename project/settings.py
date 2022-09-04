@@ -48,6 +48,7 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
     "rest_framework",
     "rest_framework.authtoken",
+    "drf_spectacular",
 ]
 
 MY_APPS = [
@@ -87,6 +88,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "project.wsgi.application"
 
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
