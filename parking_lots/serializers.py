@@ -4,14 +4,14 @@ from rest_framework import serializers
 from .models import ParkingLot
 
 
-class CreateParkingLotSerializer(serializers.ModelSerializer):
+class ParkingLotSerializer(serializers.ModelSerializer):
     class Meta:
         model = ParkingLot
         fields = "__all__"
         read_only_fields = ["owner"]
 
 
-class ListParkingLotSerializer(serializers.ModelSerializer):
+class DetailedParkingLotSerializer(serializers.ModelSerializer):
     class Meta:
         model = ParkingLot
         fields = "__all__"
